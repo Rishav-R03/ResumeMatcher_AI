@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from backend.models.utils import parse_job_description
+from backend.models.utils import extract_entities_gemini
 
 app = FastAPI()
 
@@ -13,4 +13,4 @@ def homePage():
 
 @app.post("/parse-job/")
 def parse_job(request: JobDescriptionRequest):
-    return parse_job_description(request.text)
+    return extract_entities_gemini(request.text)
