@@ -1,8 +1,9 @@
 import os
 import google.generativeai as genai
-
+from dotenv import load_dotenv
+load_dotenv()
 # Set up Gemini API Key
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyDo8Ldl54kATR4QdaEOsPFMu5rqTKYKRc0")  # Replace with actual key
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")  # Replace with actual key
 genai.configure(api_key=GOOGLE_API_KEY)
 
 def extract_entities_gemini(text):
