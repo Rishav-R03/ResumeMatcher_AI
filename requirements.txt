@@ -1,0 +1,8 @@
+fastapi 
+uvicorn[standard]
+sqlalchemy 
+psycopg2 
+pydantic 
+elasticsearch 
+langchain 
+openai
