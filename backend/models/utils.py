@@ -1,9 +1,16 @@
 import re 
 import spacy
+import nltk
 from collections import Counter
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
+# Download necessary NLTK data
+nltk.download("punkt")
+nltk.download("stopwords")
+
+# Load SpaCy model
+nlp = spacy.load("en_core_web_sm")
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -21,9 +28,9 @@ def extract_entities_spacy(text):
     job_title = []
 
     for ent in doc.ents:
-        if ent.lable_ in ["ORG","PERSON","GPE"]
-        continue
-        if ent.lable_ in ["JOB_TITLE","WORK_OF_ART"]:
+        if ent.label_ in ["ORG","PERSON","GPE"]:
+            continue
+        if ent.label_ in ["JOB_TITLE","WORK_OF_ART"]:
             job_title.append(ent.text)
         else:
             skills.append(ent.text)
