@@ -12,5 +12,10 @@ def homePage():
     return {"Job Description Parser": "Welcome to application"}
 
 @app.post("/parse-job/")
-def parse_job(request: JobDescriptionRequest):
-    return extract_entities_gemini(request.text)
+async def parse_job(request: JobDescriptionRequest):
+    result = {
+        "job_titles": ["Senior DevOps Engineer"],
+        "skills": ["AWS", "Kubernetes", "Terraform"],
+        "experience_level": ["Senior"]
+    }
+    return result
