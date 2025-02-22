@@ -1,7 +1,7 @@
 # 🔍 AI-Powered Resume & Job Matcher
 
 ## 🚀 Overview
-This project is an **AI-powered Resume & Job Matching System** that utilizes **FastAPI**, **LangChain**, **OpenAI (Gemini)**, **Elasticsearch**, **PostgreSQL**, and **Streamlit**. It provides **automated resume parsing, job description analysis, and AI-driven candidate-job matching**.
+This project is an **AI-powered Resume & Job Matching System** that utilizes **FastAPI**, **OpenAI (Gemini)**, **PostgreSQL**, and **Streamlit**. It provides **automated resume parsing, job description analysis, and AI-driven candidate-job matching**.
 
 Additionally, it integrates a **Resume Parser** that takes resumes in PDF format, extracts key details, and matches them with job descriptions. It provides two outputs:
 1. **Structured information** about the resume based on the job description.
